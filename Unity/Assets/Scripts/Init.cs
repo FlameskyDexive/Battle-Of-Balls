@@ -12,7 +12,7 @@ namespace ETModel
 			{
 				if (Application.unityVersion != "2017.4.3f1")
 				{
-					Log.Error($"新人请使用Unity2017.4.3f1,减少跑demo遇到的问题! 下载地址:\n https://download.unity3d.com/download_unity/21ae32b5a9cb/UnityDownloadAssistant-2017.4.3f1.exe");
+					//Log.Error($"新人请使用Unity2017.4.3f1,减少跑demo遇到的问题! 下载地址:\n https://download.unity3d.com/download_unity/21ae32b5a9cb/UnityDownloadAssistant-2017.4.3f1.exe");
 				}
 
 				SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);

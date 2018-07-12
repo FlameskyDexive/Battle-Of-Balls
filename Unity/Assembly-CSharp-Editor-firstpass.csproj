@@ -352,6 +352,21 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween43.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>
@@ -702,6 +717,10 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{2662B409-6332-1E56-D797-C9025C53BDD6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AssetBundleBrowser.Editor.csproj">
+      <Project>{3B78670F-2C83-69EC-6984-D98002FC0C87}</Project>
+      <Name>Unity.AssetBundleBrowser.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

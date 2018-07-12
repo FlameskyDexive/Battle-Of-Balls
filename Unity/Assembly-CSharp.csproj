@@ -288,6 +288,18 @@
     <Compile Include="Assets\Scripts\UI\UILoading\Event\LoadingBeginEvent_CreateLoadingUI.cs" />
     <Compile Include="Assets\Scripts\UI\UILoading\Event\LoadingFinishEvent_RemoveLoadingUI.cs" />
     <Compile Include="Assets\Scripts\UI\UILoading\Factory\UILoadingFactory.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\BaseImage.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\CircleImage.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\DropdownEx.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\Effect\GaussianBlur.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\Effect\PostEffecBase.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\EventTriggerListener.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\IntervalButton.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\LongPressButton.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\SetPropertyUtility.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\TextSpacing\Line.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\TextSpacing\TextSpacing.cs" />
+    <Compile Include="Assets\Scripts\UIExtention\UIParticleSystem.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\Generated\CLRBindings.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ActionHelper_Binding.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Actor_CreateUnits_Binding.cs" />
@@ -722,6 +734,23 @@
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\ServiceModel\XmlProtoSerializer.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\SubItemToken.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\protobuf-net\WireType.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Internal\uDragObject.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Internal\uEnum.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Internal\uPlayTween.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\EaseManager.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uButtonScale.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uIPointHandler.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uSliderColors.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenAlpha.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenColor.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweener.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenPath.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenPosition.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenRotation.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenScale.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenSlider.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenText.cs" />
+    <Compile Include="Assets\ThirdParty\uTween\Scripts\Tween\uTweenValue.cs" />
     <None Include="Assets\Res\Config\GlobalProto.txt" />
     <None Include="Assets\link.xml" />
     <None Include="Assets\Res\Config\BuffConfig.txt" />
@@ -945,6 +974,18 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Flame/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -1296,6 +1337,10 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{2662B409-6332-1E56-D797-C9025C53BDD6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AssetBundleBrowser.Editor.csproj">
+      <Project>{3B78670F-2C83-69EC-6984-D98002FC0C87}</Project>
+      <Name>Unity.AssetBundleBrowser.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

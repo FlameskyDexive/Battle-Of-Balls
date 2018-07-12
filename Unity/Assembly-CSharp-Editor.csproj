@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\AutoResources.cs" />
     <Compile Include="Assets\Editor\BehaviorTreeEditor\BehaviorNodeConfigExtension.cs" />
     <Compile Include="Assets\Editor\BehaviorTreeEditor\BehaviorNodeData.cs" />
     <Compile Include="Assets\Editor\BehaviorTreeEditor\BehaviorTreeConfigEditor.cs" />
@@ -94,11 +95,19 @@
     <Compile Include="Assets\Editor\BehaviorTreeEditor\NodeMeta.cs" />
     <Compile Include="Assets\Editor\BehaviorTreeEditor\NodeMetaHelper.cs" />
     <Compile Include="Assets\Editor\BehaviorTreeEditor\PropertyDesigner.cs" />
+    <Compile Include="Assets\Editor\BuildAnimation.cs" />
     <Compile Include="Assets\Editor\BuildEditor\BuildEditor.cs" />
     <Compile Include="Assets\Editor\BuildEditor\BuildHelper.cs" />
     <Compile Include="Assets\Editor\BuildEditor\BuildIOSEditor.cs" />
+    <Compile Include="Assets\Editor\DropdownExEditor.cs" />
     <Compile Include="Assets\Editor\ExcelExporterEditor\ExcelExporterEditor.cs" />
     <Compile Include="Assets\Editor\ExportNavmesh.cs" />
+    <Compile Include="Assets\Editor\FontMaker\BetterList.cs" />
+    <Compile Include="Assets\Editor\FontMaker\BMFont.cs" />
+    <Compile Include="Assets\Editor\FontMaker\BMGlyph.cs" />
+    <Compile Include="Assets\Editor\FontMaker\ByteReader.cs" />
+    <Compile Include="Assets\Editor\FontMaker\Editor\BMFontEditor.cs" />
+    <Compile Include="Assets\Editor\FontMaker\Editor\BMFontReader.cs" />
     <Compile Include="Assets\Editor\GlobalConfigEditor\GlobalConfigEditor.cs" />
     <Compile Include="Assets\Editor\Helper\EditorResHelper.cs" />
     <Compile Include="Assets\Editor\Helper\MongoHelper.cs" />
@@ -108,6 +117,7 @@
     <Compile Include="Assets\Editor\RsyncEditor\RsyncConfig.cs" />
     <Compile Include="Assets\Editor\RsyncEditor\RsyncEditor.cs" />
     <Compile Include="Assets\Editor\ServerCommandLineEditor\ServerCommandLineEditor.cs" />
+    <Compile Include="Assets\Editor\SetTextures.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\Editor\ILRuntimeCLRBinding.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\Editor\protobuf-net.Reflection\CodeGenerator.cs" />
     <Compile Include="Assets\ThirdParty\Protobuf\Editor\protobuf-net.Reflection\CodeGenerator.OneOfStub.cs" />
@@ -411,6 +421,21 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -770,6 +795,10 @@
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{F534D6C4-3368-032B-289C-A943CC171719}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AssetBundleBrowser.Editor.csproj">
+      <Project>{3B78670F-2C83-69EC-6984-D98002FC0C87}</Project>
+      <Name>Unity.AssetBundleBrowser.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

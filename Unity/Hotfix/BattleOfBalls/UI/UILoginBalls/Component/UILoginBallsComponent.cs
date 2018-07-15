@@ -18,6 +18,7 @@ namespace ETHotfix
 	public class UILoginBallsComponent : Component
 	{
 		private GameObject account;
+		private GameObject pwd;
 		private GameObject loginBtn;
 
 		public void Awake()
@@ -26,6 +27,7 @@ namespace ETHotfix
 			loginBtn = rc.Get<GameObject>("LoginBtn");
 			loginBtn.GetComponent<Button>().onClick.Add(OnLogin);
 			this.account = rc.Get<GameObject>("Account");
+			this.pwd = rc.Get<GameObject>("Password");
 		}
 
 		public async void OnLogin()
@@ -34,13 +36,14 @@ namespace ETHotfix
 			{
 				IPEndPoint connetEndPoint = NetworkHelper.ToIPEndPoint(GlobalConfigComponent.Instance.GlobalProto.Address);
 
-				string text = this.account.GetComponent<InputField>().text;
+				string accountName = this.account.GetComponent<InputField>().text;
+                string pwdText = this.pwd.GetComponent<InputField>().text;
 
-				// 创建一个ETModel层的Session
-				ETModel.Session session = ETModel.Game.Scene.GetComponent<NetOuterComponent>().Create(connetEndPoint);
+                // 创建一个ETModel层的Session
+                ETModel.Session session = ETModel.Game.Scene.GetComponent<NetOuterComponent>().Create(connetEndPoint);
 				// 创建一个ETHotfix层的Session, ETHotfix的Session会通过ETModel层的Session发送消息
 				Session realmSession = ComponentFactory.Create<Session, ETModel.Session>(session);
-				R2C_Login r2CLogin = (R2C_Login) await realmSession.Call(new C2R_Login() { Account = text, Password = "111111" });
+				R2C_Login r2CLogin = (R2C_Login) await realmSession.Call(new C2R_Login() { Account = accountName, Password = pwdText });
 				realmSession.Dispose();
 
 				connetEndPoint = NetworkHelper.ToIPEndPoint(r2CLogin.Address);
@@ -60,8 +63,8 @@ namespace ETHotfix
 				PlayerComponent playerComponent = ETModel.Game.Scene.GetComponent<PlayerComponent>();
 				playerComponent.MyPlayer = player;
 
-				Game.Scene.GetComponent<UIComponent>().Create(UIType.UILobby);
-				Game.Scene.GetComponent<UIComponent>().Remove(UIType.UILogin);
+				Game.Scene.GetComponent<UIComponent>().Create(UIType.UILobbyBalls);
+				Game.Scene.GetComponent<UIComponent>().Remove(UIType.UILoginBalls);
 			}
 			catch (Exception e)
 			{

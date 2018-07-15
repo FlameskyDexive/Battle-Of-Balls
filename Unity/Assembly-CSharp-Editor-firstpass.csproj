@@ -334,6 +334,21 @@
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Flame/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -351,21 +366,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween46.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween50.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>J:/Xnovae/Battle-Of-Balls/Unity/Assets/ThirdParty/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

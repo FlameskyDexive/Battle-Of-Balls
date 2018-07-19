@@ -35,8 +35,8 @@ namespace ILRuntime.Runtime.Generated
             ETModel_Entity_Binding.Register(app);
             ETModel_ResourcesComponent_Binding.Register(app);
             ETModel_Actor_CreateUnits_Binding.Register(app);
-            System_Collections_Generic_List_1_UnitInfo_Binding.Register(app);
-            System_Collections_Generic_List_1_UnitInfo_Binding_Enumerator_Binding.Register(app);
+            Google_Protobuf_Collections_RepeatedField_1_UnitInfo_Binding.Register(app);
+            System_Collections_Generic_IEnumerator_1_UnitInfo_Binding.Register(app);
             ETModel_UnitInfo_Binding.Register(app);
             ETModel_UnitComponent_Binding.Register(app);
             ETModel_UnitFactory_Binding.Register(app);
@@ -46,6 +46,7 @@ namespace ILRuntime.Runtime.Generated
             ETModel_Player_Binding.Register(app);
             ETModel_ComponentWithId_Binding.Register(app);
             ETModel_CameraComponent_Binding.Register(app);
+            System_Collections_IEnumerator_Binding.Register(app);
             System_IDisposable_Binding.Register(app);
             ETModel_Actor_Test_Binding.Register(app);
             ETModel_MoveComponent_Binding.Register(app);
@@ -82,7 +83,6 @@ namespace ILRuntime.Runtime.Generated
             ETModel_NetworkComponent_Binding.Register(app);
             ETModel_IMessagePacker_Binding.Register(app);
             ETModel_MessageInfo_Binding.Register(app);
-            ETModel_ProtobufHelper_Binding.Register(app);
             System_Threading_Tasks_TaskCompletionSource_1_ILTypeInstance_Binding.Register(app);
             System_Threading_CancellationToken_Binding.Register(app);
             ETModel_ErrorCode_Binding.Register(app);
@@ -91,9 +91,9 @@ namespace ILRuntime.Runtime.Generated
             ETModel_OpcodeTypeComponent_Binding.Register(app);
             ETModel_MessageProxy_Binding.Register(app);
             ETModel_MessageDispatherComponent_Binding.Register(app);
-            ETModel_MessageAttribute_Binding.Register(app);
             ETModel_DoubleMap_2_UInt16_Type_Binding.Register(app);
-            ProtoBuf_PType_Binding.Register(app);
+            System_Collections_Generic_Dictionary_2_UInt16_Object_Binding.Register(app);
+            ETModel_MessageAttribute_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding.Register(app);
             UnityEngine_GameObject_Binding.Register(app);
             ETModel_UIFactoryAttribute_Binding.Register(app);
@@ -101,6 +101,9 @@ namespace ILRuntime.Runtime.Generated
             UnityEngine_Transform_Binding.Register(app);
             System_Collections_Generic_List_1_String_Binding.Register(app);
             ETModel_Scene_Binding.Register(app);
+            Google_Protobuf_ProtoPreconditions_Binding.Register(app);
+            Google_Protobuf_CodedOutputStream_Binding.Register(app);
+            Google_Protobuf_CodedInputStream_Binding.Register(app);
             UnityEngine_Object_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding_ValueCollection_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_String_ILTypeInstance_Binding_ValueCollection_Binding_Enumerator_Binding.Register(app);

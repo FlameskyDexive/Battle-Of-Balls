@@ -251,6 +251,12 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/USER-PC/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:/Apps/Unity2017.4/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:/Apps/Unity2017.4/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Plugins.csproj">
@@ -342,6 +348,7 @@
     <Compile Include="Assets\Scripts\Entity\WWWAsync.cs" />
     <Compile Include="Assets\Scripts\Helper\ActionHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\BundleHelper.cs" />
+    <Compile Include="Assets\Scripts\Helper\Dumper.cs" />
     <Compile Include="Assets\Scripts\Helper\GameObjectHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\ILHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\PathHelper.cs" />
@@ -388,6 +395,7 @@
     <Compile Include="Assets\Scripts\Module\Message\MessageDispatherComponent.cs" />
     <Compile Include="Assets\Scripts\Module\Message\MessageHandlerAttribute.cs" />
     <Compile Include="Assets\Scripts\Module\Message\MessageInfo.cs" />
+    <Compile Include="Assets\Scripts\Module\Message\MessagePool.cs" />
     <Compile Include="Assets\Scripts\Module\Message\MessageProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Message\NetOuterComponent.cs" />
     <Compile Include="Assets\Scripts\Module\Message\Network\AChannel.cs" />

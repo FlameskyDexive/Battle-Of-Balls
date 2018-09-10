@@ -20,18 +20,24 @@ namespace ETModel
 		/// <summary>
 		/// 即可做client也可做server
 		/// </summary>
-		public TService(IPEndPoint ipEndPoint)
+		public TService(IPEndPoint ipEndPoint, Action<AChannel> acceptCallback)
 		{
+			this.InstanceId = IdGenerater.GenerateId();
+			this.AcceptCallback += acceptCallback;
+			
 			this.acceptor = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 			this.acceptor.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 			this.innArgs.Completed += this.OnComplete;
 			
 			this.acceptor.Bind(ipEndPoint);
 			this.acceptor.Listen(1000);
+
+			this.AcceptAsync();
 		}
 
 		public TService()
 		{
+			this.InstanceId = IdGenerater.GenerateId();
 		}
 		
 		public override void Dispose()
@@ -51,14 +57,6 @@ namespace ETModel
 			this.acceptor?.Close();
 			this.acceptor = null;
 			this.innArgs.Dispose();
-		}
-
-		public override void Start()
-		{
-			if (this.acceptor != null)
-			{
-				this.AcceptAsync();
-			}
 		}
 
 		private void OnComplete(object sender, SocketAsyncEventArgs e)
@@ -129,6 +127,11 @@ namespace ETModel
 			this.idChannels[channel.Id] = channel;
 
 			return channel;
+		}
+
+		public override AChannel ConnectChannel(string address)
+		{
+			throw new NotImplementedException();
 		}
 
 		public override void Remove(long id)

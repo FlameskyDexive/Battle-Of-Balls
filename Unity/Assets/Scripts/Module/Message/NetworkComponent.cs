@@ -29,13 +29,12 @@ namespace ETModel
 					case NetworkProtocol.TCP:
 						this.Service = new TService();
 						break;
-					default:
-						throw new ArgumentOutOfRangeException();
+#if SERVER
+					case NetworkProtocol.WebSocket:
+						this.Service = new WService();
+						break;
+#endif
 				}
-
-				this.Service.AcceptCallback += this.OnAccept;
-				
-				this.Start();
 			}
 			catch (Exception e)
 			{
@@ -43,35 +42,33 @@ namespace ETModel
 			}
 		}
 
-		public void Awake(NetworkProtocol protocol, IPEndPoint ipEndPoint)
+		public void Awake(NetworkProtocol protocol, string address)
 		{
 			try
 			{
+				IPEndPoint ipEndPoint;
 				switch (protocol)
 				{
 					case NetworkProtocol.KCP:
-						this.Service = new KService(ipEndPoint);
+						ipEndPoint = NetworkHelper.ToIPEndPoint(address);
+						this.Service = new KService(ipEndPoint, this.OnAccept);
 						break;
 					case NetworkProtocol.TCP:
-						this.Service = new TService(ipEndPoint);
+						ipEndPoint = NetworkHelper.ToIPEndPoint(address);
+						this.Service = new TService(ipEndPoint, this.OnAccept);
 						break;
-					default:
-						throw new ArgumentOutOfRangeException();
+#if SERVER
+					case NetworkProtocol.WebSocket:
+						string[] prefixs = address.Split(';');
+						this.Service = new WService(prefixs, this.OnAccept);
+						break;
+#endif
 				}
-				
-				this.Service.AcceptCallback += this.OnAccept;
-				
-				this.Start();
 			}
 			catch (Exception e)
 			{
-				throw new Exception($"{ipEndPoint}", e);
+				throw new Exception($"NetworkComponent Awake Error {address}", e);
 			}
-		}
-
-		public void Start()
-		{
-			this.Service.Start();
 		}
 
 		public int Count
@@ -109,6 +106,17 @@ namespace ETModel
 		public Session Create(IPEndPoint ipEndPoint)
 		{
 			AChannel channel = this.Service.ConnectChannel(ipEndPoint);
+			Session session = ComponentFactory.CreateWithParent<Session, AChannel>(this, channel);
+			this.sessions.Add(session.Id, session);
+			return session;
+		}
+		
+		/// <summary>
+		/// 创建一个新Session
+		/// </summary>
+		public Session Create(string url)
+		{
+			AChannel channel = this.Service.ConnectChannel(url);
 			Session session = ComponentFactory.CreateWithParent<Session, AChannel>(this, channel);
 			this.sessions.Add(session.Id, session);
 			return session;

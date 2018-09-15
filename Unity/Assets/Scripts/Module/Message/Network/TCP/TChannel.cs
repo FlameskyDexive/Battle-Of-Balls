@@ -24,6 +24,8 @@ namespace ETModel
 
 		private bool isSending;
 
+		private bool isRecving;
+
 		private bool isConnected;
 
 		private readonly PacketParser parser;
@@ -102,9 +104,14 @@ namespace ETModel
 				this.ConnectAsync(this.RemoteAddress);
 				return;
 			}
-			
-			this.StartRecv();
-			this.StartSend();
+
+			if (!this.isRecving)
+			{
+				this.isRecving = true;
+				this.StartRecv();
+			}
+
+			this.GetService().MarkNeedStartSend(this.Id);
 		}
 		
 		public override void Send(MemoryStream stream)
@@ -118,10 +125,7 @@ namespace ETModel
 			this.sendBuffer.Write(this.cache, 0, this.cache.Length);
 			this.sendBuffer.ReadFrom(stream);
 
-			if(!this.isSending)
-			{
-				this.StartSend();
-			}
+			this.GetService().MarkNeedStartSend(this.Id);
 		}
 
 		private void OnComplete(object sender, SocketAsyncEventArgs e)
@@ -172,8 +176,7 @@ namespace ETModel
 			e.RemoteEndPoint = null;
 			this.isConnected = true;
 			
-			this.StartRecv();
-			this.StartSend();
+			this.Start();
 		}
 
 		private void OnDisconnectComplete(object o)
@@ -260,7 +263,9 @@ namespace ETModel
 			this.StartRecv();
 		}
 
-		private void StartSend()
+		public bool IsSending => this.isSending;
+
+		public void StartSend()
 		{
 			if(!this.isConnected)
 			{

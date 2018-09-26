@@ -12,16 +12,13 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.9f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -262,198 +259,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Base\DoubleMap.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\Env.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\EnvKey.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\EventAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\EventIdType.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\IEvent.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\ByteHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\EnumHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\FileHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\IdGenerater.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\JsonHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\MD5Helper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\MethodInfoHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\NetHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\ObjectHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\RandomHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\StringHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\TimeHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\Helper\ZipHelper.cs" />
-    <Compile Include="Assets\Scripts\Base\IL\Adapt_IMessage.cs" />
-    <Compile Include="Assets\Scripts\Base\IL\IAsyncStateMachineAdaptor.cs" />
-    <Compile Include="Assets\Scripts\Base\IL\IDisposableAdaptor.cs" />
-    <Compile Include="Assets\Scripts\Base\IL\ILAdapterAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\IL\ILBindingAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\Log.cs" />
-    <Compile Include="Assets\Scripts\Base\LogType.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\AcosLookupTable.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\Atan2LookupTable.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\IntMath.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\SinCosLookupTable.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VFactor.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VInt.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VInt2.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VInt3.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VLine.cs" />
-    <Compile Include="Assets\Scripts\Base\Math\VRect.cs" />
-    <Compile Include="Assets\Scripts\Base\MultiMap.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\BaseAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\Component.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ComponentFactory.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ComponentWithId.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\Entity.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\EntityEventAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\EventProxy.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\EventSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IAwakeSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IChangeSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IComponentSerialize.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IDestroySystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ILateUpdateSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ILoadSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ISerializeToEntity.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IStartSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\IUpdateSystem.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\Object.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\Base\Object\ObjectSystemAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\OneThreadSynchronizationContext.cs" />
-    <Compile Include="Assets\Scripts\Base\QueueDictionary.cs" />
-    <Compile Include="Assets\Scripts\Base\RecyclableMemoryStream\Events.cs" />
-    <Compile Include="Assets\Scripts\Base\RecyclableMemoryStream\RecyclableMemoryStream.cs" />
-    <Compile Include="Assets\Scripts\Base\RecyclableMemoryStream\RecyclableMemoryStreamManager.cs" />
-    <Compile Include="Assets\Scripts\Base\TryLocker.cs" />
-    <Compile Include="Assets\Scripts\Base\UnOrderMultiMap.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\ClientConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\DBConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\GlobalProto.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\HttpConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\InnerConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\OuterConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\RunServerConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\Config\StartConfig.cs" />
-    <Compile Include="Assets\Scripts\Component\GlobalConfigComponent.cs" />
-    <Compile Include="Assets\Scripts\Component\SceneChangeComponent.cs" />
-    <Compile Include="Assets\Scripts\Component\TimerComponent.cs" />
-    <Compile Include="Assets\Scripts\Entity\Config\UnitConfig.cs" />
-    <Compile Include="Assets\Scripts\Entity\Game.cs" />
-    <Compile Include="Assets\Scripts\Entity\Hotfix.cs" />
-    <Compile Include="Assets\Scripts\Entity\Scene.cs" />
-    <Compile Include="Assets\Scripts\Entity\UnityWebRequestAsync.cs" />
-    <Compile Include="Assets\Scripts\Entity\WWWAsync.cs" />
-    <Compile Include="Assets\Scripts\Helper\ActionHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\BundleHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\Dumper.cs" />
-    <Compile Include="Assets\Scripts\Helper\GameObjectHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\ILHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\PathHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\PositionHelper.cs" />
-    <Compile Include="Assets\Scripts\Helper\ResourcesHelper.cs" />
-    <Compile Include="Assets\Scripts\Init.cs" />
-    <Compile Include="Assets\Scripts\Module\AssetsBundle\AssetsBundleLoaderAsync.cs" />
-    <Compile Include="Assets\Scripts\Module\AssetsBundle\AssetsLoaderAsync.cs" />
-    <Compile Include="Assets\Scripts\Module\AssetsBundle\BundleDownloaderComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\AssetsBundle\ResourcesComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\AssetsBundle\VersionConfig.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\ACategory.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\AConfigComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\ConfigAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\ConfigComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\ConfigHelper.cs" />
-    <Compile Include="Assets\Scripts\Module\Config\IConfig.cs" />
-    <Compile Include="Assets\Scripts\Module\Filter\FilterAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\Filter\FilterComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Filter\FilterEntity.cs" />
-    <Compile Include="Assets\Scripts\Module\Filter\IFilter.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\AnimatorComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\CameraComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\ClientFrameComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\FrameMessage.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\FrameOpcode.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\MoveComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\Player.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\PlayerComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\PlayerFactory.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\SessionComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\Unit.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\UnitComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\FrameSync\UnitFactory.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\AMHandler.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\ErrorCode.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IActorMessage.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IClientActorMessage.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IMessage.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IMessageDispatcher.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IMessagePacker.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\IMHandler.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessageAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessageDispatherComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessageHandlerAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessageInfo.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessagePool.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\MessageProxy.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\NetOuterComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\NetOuterComponentSystem.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\AChannel.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\AService.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\Circularbuffer.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\KCP\KChannel.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\KCP\Kcp.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\KCP\KService.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\NetworkHelper.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\TCP\PacketParser.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\TCP\TChannel.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\TCP\TService.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\WebSocket\WChannel.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Network\WebSocket\WService.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\NetworkComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Opcode.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\OpcodeHelper.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\OpcodeTypeComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\OuterMessage.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\OuterMessageDispatcher.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\OuterOpcode.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\ProtobufHelper.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\ProtobufPacker.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\RpcException.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\Session.cs" />
-    <Compile Include="Assets\Scripts\Module\Message\SessionCallbackComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\INumericWatcher.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericType.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericWatcher_Hp_ShowUI.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericWatcherAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\Numeric\NumericWatcherComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\CanvasConfig.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\IUIFactory.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\LayerNames.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\UI.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\UIComponent.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\UIFactoryAttribute.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\UIType.cs" />
-    <Compile Include="Assets\Scripts\Other\AppType.cs" />
-    <Compile Include="Assets\Scripts\Other\Define.cs" />
-    <Compile Include="Assets\Scripts\Other\IInstanceMethod.cs" />
-    <Compile Include="Assets\Scripts\Other\ILMethod.cs" />
-    <Compile Include="Assets\Scripts\Other\MonoMethod.cs" />
-    <Compile Include="Assets\Scripts\Other\MotionType.cs" />
-    <Compile Include="Assets\Scripts\Other\ReferenceCollector.cs" />
-    <Compile Include="Assets\Scripts\UI\UILoading\Component\UILoadingComponent.cs" />
-    <Compile Include="Assets\Scripts\UI\UILoading\Event\LoadingBeginEvent_CreateLoadingUI.cs" />
-    <Compile Include="Assets\Scripts\UI\UILoading\Event\LoadingFinishEvent_RemoveLoadingUI.cs" />
-    <Compile Include="Assets\Scripts\UI\UILoading\Factory\UILoadingFactory.cs" />
+    <ProjectReference Include="Unity.Editor.csproj">
+      <Project>{C17F48D3-964E-E97C-3D2E-966F7A6C6D93}</Project>
+      <Name>Unity.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Hotfix.csproj">
+      <Project>{350246F3-F094-675F-855B-FB9B18C2B23E}</Project>
+      <Name>Unity.Hotfix</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Model.csproj">
+      <Project>{6396AEEA-8EF9-9740-4CEF-891CC997106C}</Project>
+      <Name>Unity.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\ThirdParty\Google.Protobuf\AdaptHelper.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\ByteArray.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\ByteString.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\CodedInputStream.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\CodedOutputStream.ComputeSize.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\CodedOutputStream.cs" />
-    <Compile Include="Assets\ThirdParty\Google.Protobuf\Collections\RepeatedField.cs" />
-    <Compile Include="Assets\ThirdParty\Google.Protobuf\Compatibility\PropertyInfoExtensions.cs" />
-    <Compile Include="Assets\ThirdParty\Google.Protobuf\Compatibility\StreamExtensions.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\FieldCodec.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\ICustomDiagnosticMessage.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\IMessage.cs" />
@@ -461,127 +286,11 @@
     <Compile Include="Assets\ThirdParty\Google.Protobuf\LimitedInputStream.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\MessageExtensions.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\MessageParser.cs" />
+    <Compile Include="Assets\ThirdParty\Google.Protobuf\PropertyInfoExtensions.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\ProtoPreconditions.cs" />
+    <Compile Include="Assets\ThirdParty\Google.Protobuf\RepeatedField.cs" />
+    <Compile Include="Assets\ThirdParty\Google.Protobuf\StreamExtensions.cs" />
     <Compile Include="Assets\ThirdParty\Google.Protobuf\WireFormat.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\CLRBindings.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ActionHelper_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Actor_CreateUnits_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Actor_Test_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Actor_TestRequest_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Actor_TransferRequest_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_C2G_EnterMap_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_CameraComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_CanvasConfig_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Component_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ComponentFactory_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ComponentWithId_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_DoubleMap_2_UInt16_Type_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Entity_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ErrorCode_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_EventAttribute_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_EventProxy_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_EventSystem_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Frame_ClickMap_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Game_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_GameObjectHelper_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_GlobalConfigComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_GlobalProto_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Hotfix_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_IdGenerater_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_IMessagePacker_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Log_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_MessageAttribute_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_MessageDispatherComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_MessageInfo_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_MessageProxy_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_MoveComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_NetworkComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_NetworkHelper_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_OpcodeTypeComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Player_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_PlayerComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_ResourcesComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_RpcException_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Scene_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Session_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_SessionCallbackComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_SessionComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_UIFactoryAttribute_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_Unit_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_UnitComponent_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_UnitFactory_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_UnitInfo_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ETModel_UnOrderMultiMap_2_Type_ILTypeInstance_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_CodedInputStream_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_CodedOutputStream_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_Collections_RepeatedField_1_Google_Protobuf_Ad_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_Collections_RepeatedField_1_Int32_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_Collections_RepeatedField_1_Int64_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_Collections_RepeatedField_1_String_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_Collections_RepeatedField_1_UnitInfo_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_FieldCodec_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_MessageParser_1_Google_Protobuf_Adapt_IMessage_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\Google_Protobuf_ProtoPreconditions_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\LitJson_JsonMapper_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\ReferenceCollector_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Action_1_Google_Protobuf_Adapt_IMessage_Binding_Adaptor_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Activator_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Int32_Action_1_Google__t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Int64_ILTypeInstance_B_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_ILTypeInstance__t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_ILTypeInstance__t_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_ILTypeInstance__t_t_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_String_List_1_ILTypeIn_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Bi_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Bi_t_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Type_ILTypeInstance_Bi_t_t_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Type_Queue_1_ILTypeIns_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_Type_Queue_1_Object_Bi_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_UInt16_List_1_ILTypeIn_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Dictionary_2_UInt16_Object_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding_En_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_IEnumerator_1_UnitInfo_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_ILTypeInstance_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_ILTypeInstance_Binding_Enume_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_Object_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_String_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_Type_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_List_1_Type_Binding_Enumerator_Bind_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Queue_1_ILTypeInstance_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Queue_1_Int64_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_Generic_Queue_1_Object_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_IDictionary_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Collections_IEnumerator_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Exception_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_IDisposable_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Linq_Enumerable_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_NotImplementedException_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Object_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Reflection_MemberInfo_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Runtime_CompilerServices_AsyncVoidMethodBuilder_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Runtime_CompilerServices_TaskAwaiter_1_Google_Protobuf__t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Runtime_CompilerServices_TaskAwaiter_1_IResponse_Bindin_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_String_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Threading_CancellationToken_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Threading_Tasks_Task_1_Google_Protobuf_Adapt_IMessage_B_t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Threading_Tasks_Task_1_IResponse_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Threading_Tasks_TaskCompletionSource_1_Google_Protobuf__t.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\System_Type_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Camera_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Component_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_GameObject_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Input_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_LayerMask_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Object_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Physics_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_RaycastHit_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_TextAsset_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Transform_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_UI_Button_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_UI_InputField_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\UnityEngine_Vector3_Binding.cs" />
-    <Compile Include="Assets\ThirdParty\ILRuntime\Generated\VInt3_Binding.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\CLRMethod.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\ExceptionHandler.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\ILMethod.cs" />

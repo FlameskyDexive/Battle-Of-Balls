@@ -22,7 +22,12 @@ namespace ETHotfix
     [ObjectSystem]
     public class ActorLocationSenderStartSystem : StartSystem<ActorLocationSender>
     {
-        public override async void Start(ActorLocationSender self)
+	    public override void Start(ActorLocationSender self)
+	    {
+		    StartAsync(self).NoAwait();
+	    }
+	    
+        public async ETVoid StartAsync(ActorLocationSender self)
         {
             self.ActorId = await Game.Scene.GetComponent<LocationProxyComponent>().Get(self.Id);
 
@@ -30,7 +35,7 @@ namespace ETHotfix
                     .Get(IdGenerater.GetAppIdFromId(self.ActorId))
                     .GetComponent<InnerConfig>().IPEndPoint;
 
-            self.UpdateAsync();
+            self.UpdateAsync().NoAwait();
         }
     }
 	
@@ -91,19 +96,19 @@ namespace ETHotfix
 			t.SetResult(task);
 		}
 
-		private static Task<ActorTask> GetAsync(this ActorLocationSender self)
+		private static ETTask<ActorTask> GetAsync(this ActorLocationSender self)
 		{
 			if (self.WaitingTasks.Count > 0)
 			{
 				ActorTask task = self.WaitingTasks.Peek();
-				return Task.FromResult(task);
+				return ETTask.FromResult(task);
 			}
 
-			self.Tcs = new TaskCompletionSource<ActorTask>();
+			self.Tcs = new ETTaskCompletionSource<ActorTask>();
 			return self.Tcs.Task;
 		}
 
-		public static async void UpdateAsync(this ActorLocationSender self)
+		public static async ETVoid UpdateAsync(this ActorLocationSender self)
 		{
 			try
 			{
@@ -200,13 +205,13 @@ namespace ETHotfix
 		    self.Add(task);
 	    }
 
-		public static Task<IActorLocationResponse> Call(this ActorLocationSender self, IActorLocationRequest request)
+		public static ETTask<IActorLocationResponse> Call(this ActorLocationSender self, IActorLocationRequest request)
 		{
 			if (request == null)
 			{
 				throw new Exception($"actor location call message is null");
 			}
-			TaskCompletionSource<IActorLocationResponse> tcs = new TaskCompletionSource<IActorLocationResponse>();
+			ETTaskCompletionSource<IActorLocationResponse> tcs = new ETTaskCompletionSource<IActorLocationResponse>();
 			ActorTask task = new ActorTask(request, tcs);
 			self.Add(task);
 			return task.Tcs.Task;

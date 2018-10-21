@@ -8,15 +8,15 @@ namespace ETModel
 {
 	public class Init : MonoBehaviour
 	{
-		private async void Start()
+		private void Start()
+		{
+			this.StartAsync().NoAwait();
+		}
+		
+		private async ETVoid StartAsync()
 		{
 			try
-			{ 
-				if (!Application.unityVersion.StartsWith("2017.4"))
-				{
-					Log.Error($"新人请使用Unity2017.4版本,减少跑demo遇到的问题! 下载地址:\n https://unity3d.com/cn/unity/qa/lts-releases?_ga=2.227583646.282345691.1536717255-1119432033.1499739574");
-				}
-
+			{
 				SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
 
 				DontDestroyOnLoad(gameObject);

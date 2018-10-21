@@ -25,7 +25,7 @@ namespace ETHotfix
 			self.address = addr;
 		}
 		
-		public static async Task Lock(this LockComponent self)
+		public static async ETTask Lock(this LockComponent self)
 		{
 			++self.lockCount;
 
@@ -49,24 +49,24 @@ namespace ETHotfix
 			}
 			else
 			{
-				self.RequestLock();
+				self.RequestLock().NoAwait();
 				await self.WaitLock();
 			}
 		}
 
-		private static Task<bool> WaitLock(this LockComponent self)
+		private static ETTask<bool> WaitLock(this LockComponent self)
 		{
 			if (self.status == LockStatus.Locked)
 			{
-				return Task.FromResult(true);
+				return ETTask.FromResult(true);
 			}
 
-			TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+			ETTaskCompletionSource<bool> tcs = new ETTaskCompletionSource<bool>();
 			self.queue.Enqueue(tcs);
 			return tcs.Task;
 		}
 
-		private static async void RequestLock(this LockComponent self)
+		private static async ETVoid RequestLock(this LockComponent self)
 		{
 			try
 			{
@@ -77,7 +77,7 @@ namespace ETHotfix
 
 				self.status = LockStatus.Locked;
 
-				foreach (TaskCompletionSource<bool> taskCompletionSource in self.queue)
+				foreach (ETTaskCompletionSource<bool> taskCompletionSource in self.queue)
 				{
 					taskCompletionSource.SetResult(true);
 				}
@@ -89,7 +89,7 @@ namespace ETHotfix
 			}
 		}
 
-		public static async Task Release(this LockComponent self)
+		public static async ETTask Release(this LockComponent self)
 		{
 			--self.lockCount;
 			if (self.lockCount != 0)

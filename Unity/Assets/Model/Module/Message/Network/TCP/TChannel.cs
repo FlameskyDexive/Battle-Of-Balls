@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using Microsoft.IO;
 
 namespace ETModel
 {
@@ -34,7 +31,6 @@ namespace ETModel
 		
 		public TChannel(IPEndPoint ipEndPoint, TService service): base(service, ChannelType.Connect)
 		{
-			this.InstanceId = IdGenerater.GenerateId();
 			this.memoryStream = this.GetService().MemoryStreamManager.GetStream("message", ushort.MaxValue);
 			
 			this.socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -51,7 +47,6 @@ namespace ETModel
 		
 		public TChannel(Socket socket, TService service): base(service, ChannelType.Accept)
 		{
-			this.InstanceId = IdGenerater.GenerateId();
 			this.memoryStream = this.GetService().MemoryStreamManager.GetStream("message", ushort.MaxValue);
 			
 			this.socket = socket;

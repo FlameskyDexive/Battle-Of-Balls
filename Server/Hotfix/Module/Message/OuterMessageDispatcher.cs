@@ -1,6 +1,5 @@
 ﻿using System;
 using ETModel;
-using Google.Protobuf;
 
 namespace ETHotfix
 {
@@ -38,7 +37,7 @@ namespace ETHotfix
 					}
 				}
 
-				Game.Scene.GetComponent<MessageDispatherComponent>().Handle(session, new MessageInfo(opcode, message));
+				Game.Scene.GetComponent<MessageDispatcherComponent>().Handle(session, new MessageInfo(opcode, message));
 			}
 			catch (Exception e)
 			{

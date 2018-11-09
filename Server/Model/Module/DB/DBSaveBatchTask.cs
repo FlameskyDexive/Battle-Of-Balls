@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace ETModel
 {
 	[ObjectSystem]
-	public class DbSaveBatchTaskSystem : AwakeSystem<DBSaveBatchTask, List<ComponentWithId>, string, ETTaskCompletionSource<bool>>
+	public class DbSaveBatchTaskSystem : AwakeSystem<DBSaveBatchTask, List<ComponentWithId>, string, ETTaskCompletionSource>
 	{
-		public override void Awake(DBSaveBatchTask self, List<ComponentWithId> components, string collectionName, ETTaskCompletionSource<bool> tcs)
+		public override void Awake(DBSaveBatchTask self, List<ComponentWithId> components, string collectionName, ETTaskCompletionSource tcs)
 		{
 			self.Components = components;
 			self.CollectionName = collectionName;
@@ -23,7 +22,7 @@ namespace ETModel
 
 		public List<ComponentWithId> Components;
 
-		public ETTaskCompletionSource<bool> Tcs;
+		public ETTaskCompletionSource Tcs;
 	
 		public override async ETTask Run()
 		{
@@ -47,7 +46,7 @@ namespace ETModel
 					this.Tcs.SetException(new Exception($"保存数据失败! {CollectionName} {this.Components.ListToString()}", e));
 				}
 			}
-			this.Tcs.SetResult(true);
+			this.Tcs.SetResult();
 		}
 	}
 }

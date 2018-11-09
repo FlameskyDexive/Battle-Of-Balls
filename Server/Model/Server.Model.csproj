@@ -44,6 +44,9 @@
     <Compile Include="..\..\Unity\Assets\Model\Base\Async\MoveNextRunner.cs">
       <Link>Base\Async\MoveNextRunner.cs</Link>
     </Compile>
+    <Compile Include="..\..\Unity\Assets\Model\Base\Object\IDeserializeSystem.cs">
+      <Link>Base\Base\IDeserializeSystem.cs</Link>
+    </Compile>
     <Compile Include="..\..\Unity\Assets\Model\Base\UnityMath\Color32.cs">
       <Link>Base\UnityMath\Color32.cs</Link>
     </Compile>
@@ -131,7 +134,6 @@
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\EventSystem.cs" Link="Base\Base\EventSystem.cs" />
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\IAwakeSystem.cs" Link="Base\Base\IAwakeSystem.cs" />
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\IChangeSystem.cs" Link="Base\Base\IChangeSystem.cs" />
-    <Compile Include="..\..\Unity\Assets\Model\Base\Object\IComponentSerialize.cs" Link="Base\Base\IComponentSerialize.cs" />
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\IDestroySystem.cs" Link="Base\Base\IDestroySystem.cs" />
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\ILateUpdateSystem.cs" Link="Base\Base\ILateUpdateSystem.cs" />
     <Compile Include="..\..\Unity\Assets\Model\Base\Object\ILoadSystem.cs" Link="Base\Base\ILoadSystem.cs" />
@@ -326,6 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.2.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Scripting" Version="2.9.0" />
     <PackageReference Include="NLog" Version="4.5.4" />
     <PackageReference Include="SharpZipLib" Version="1.0.0-alpha2" />
   </ItemGroup>
